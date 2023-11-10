@@ -37,7 +37,7 @@ export class TabsCodeView {
             while ((match = pattern.exec(this.CodeBlockContent.split("\n")[1])) !== null) {
                 buttonNameArry.push(match[1]);
             }
-            const pagesLines: HTMLDivElement[] = [];  // 用于存储所有的 pagesLine 元素
+            const pagesLines: HTMLDivElement[] = [];
             for (let j = 0; j < buttonNameArry.length; j++) {
                 elems[j] = document.createElement('button');
                 elems[j].textContent = buttonNameArry[j];
@@ -77,10 +77,8 @@ export class TabsCodeView {
                     separator = "~~~";
                 }
             }
-            // 使用正则表达式匹配由一个或多个 " === " 分隔的字符串，其中可能包含任意数量的空格
             const regex = new RegExp(`\\s*${separator}\\s*`);
             const paragraphs = allLinesAfterFirst.split(regex);
-            // 将每一段字符串设置为一个新的 div 的内容，并保存到对象中
             for (let i = 0; i < paragraphs.length; i++) {
                 if (i >= 1) {
                     const pagesLine = document.createElement('div');
@@ -88,10 +86,9 @@ export class TabsCodeView {
                         pagesLine.style.display = 'none';
                     }
                     pagesLine.className = "TabsCodeBlock-tabs-pages"
-                    // 以markdown的方式呈现元素,CodeBlockContent会被包裹在一个元素中
                     await MarkdownRenderer.render(this.app, paragraphs[i], pagesLine, this.ctx.sourcePath, this.plugin);
                     contend.appendChild(pagesLine);
-                    pagesLines.push(pagesLine);  // 将 pagesLine 元素添加到数组中
+                    pagesLines.push(pagesLine);
                 }
             }
             div.appendChild(box);
