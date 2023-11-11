@@ -3,7 +3,7 @@
 	"name": "minitabs",
 	"version": "1.0.0",
 	"minAppVersion": "0.15.0",
-	"description": "迷你标签页",
+	"description": "通过代码块自定义一组可嵌套的标签页",
 	"author": "ssjy1919",
 	"authorUrl": "https://obsidian.md",
 	"fundingUrl": "https://obsidian.md/pricing",
