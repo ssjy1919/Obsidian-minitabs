@@ -5,7 +5,5 @@
 	"minAppVersion": "0.15.0",
 	"description": "迷你标签页",
 	"author": "ssjy1919",
-	"authorUrl": "https://obsidian.md",
-	"fundingUrl": "https://obsidian.md/pricing",
 	"isDesktopOnly": false
 }
