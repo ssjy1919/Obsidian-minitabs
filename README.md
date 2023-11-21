@@ -1,4 +1,7 @@
 ## 例1，tab按钮在上
+效果: 
+ ![Image 例一](Screenshots/例一.png)
+ 代码块语法：
 ````md
 ```minitabs
 tabs
@@ -11,7 +14,11 @@ tabs
 按钮三对应的页面
 ```
 ````
+
 ## 例2，tab按钮在下
+效果: 
+ ![Image 例二](Screenshots/例二.png)
+ 代码块语法：
 ````md
 ```minitabs
 tabsBottom
@@ -27,7 +34,10 @@ tabsBottom
 
 
 ## 上下tab按钮相互套娃
-这只是一个示例！实际上，如果需要套娃更推荐用`![[link]]`链接到第二层 tabs。
+这只是一个示例！实际上，如果需要套娃更推荐用引用语法`![[link]]`链接到第二层 tabs。注意不要引用回自身，这样会造成Obsidian程序崩溃，需要到资源管理器删除引用回自身的链接才能打开Obsidian。
+效果: 
+ ![Image 例三](Screenshots/例三.png)
+ 代码块语法：
 ``````md
 `````minitabs
 tabs
