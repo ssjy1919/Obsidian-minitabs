@@ -21,10 +21,10 @@ button.TabsCodeBlock-tabs-buttonName {
   width: auto;
   height: auto;
   font-size: 1em;
-  padding-top: 0px;
+  /* padding-top: 0px;
   padding-bottom: 3px;
   padding-left: 6px;
-  padding-right: 6px;
+  padding-right: 6px; */
   border-radius: 15px 15px 0px 0px;
   box-shadow: none;
 }
