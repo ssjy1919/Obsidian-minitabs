@@ -6,7 +6,7 @@
 .block-language-minitabs:nth-child(odd) {
   border-radius: 15px 15px 0px 0px;
   background-color: var(--butn-before-color);
-  box-shadow: 0px 0px 5px 0px rgba(79, 79, 79, 0.26), 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0px 0px 5px 0px rgba(79, 79, 79, 0.26), 0px 0px 5px 0px rgba(0, 0, 0, 0.1); */
 }
 
 .TabsCodeBlock.TabsCodeBlock-buns {
@@ -21,10 +21,12 @@ button.TabsCodeBlock-tabs-buttonName {
   width: auto;
   height: auto;
   font-size: 1em;
+  padding-top: 0px;
+  padding-bottom: 2px;
   padding-left: 6px;
   padding-right: 6px;
   border-radius: 15px 15px 0px 0px;
-
+  box-shadow: none;
 }
 
 button.TabsCodeBlock-tabs-buttonName:hover {
@@ -49,5 +51,5 @@ button.TabsCodeBlock-tabs-buttonName.active {
 .block-language-tabs:nth-child(even) {
   border-radius: 15px 15px 0px 0px;
   background-color: rgb(216, 234, 247);
-  box-shadow: 0px 0px 5px 0px rgba(79, 79, 79, 0.26), 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0px 0px 5px 0px rgba(79, 79, 79, 0.26), 0px 0px 5px 0px rgba(0, 0, 0, 0.1); */
 }
