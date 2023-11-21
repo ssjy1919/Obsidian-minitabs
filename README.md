@@ -1,3 +1,6 @@
+## 这是一个Obsidian笔记软件的插件
+可以通过代码块嵌入多个标签页
+
 ## 例1，tab按钮在上
 效果: 
  ![Image 例一](Screenshots/例一.png)
