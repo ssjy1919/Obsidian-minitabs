@@ -1,9 +1,0 @@
-{
-	"id": "minitabs",
-	"name": "minitabs",
-	"version": "0.0.2",
-	"minAppVersion": "0.15.0",
-	"description": "迷你标签页",
-	"author": "ssjy1919",
-	"isDesktopOnly": false
-}
