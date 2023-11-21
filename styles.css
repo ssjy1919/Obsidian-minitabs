@@ -1,47 +1,53 @@
-:root{
-  --butn-background-color: rgb(188, 229, 243);
-  --butn-before-color: rgb(213, 240, 248);
+:root {
+  --butn-background-color: #c3def3;
+  --butn-before-color: #ecf4fa;
 }
 
 .block-language-minitabs:nth-child(odd) {
-  border-radius: 7px  7px 0px 0px;
-  background-color: #dbf7f7; 
+  border-radius: 15px 15px 0px 0px;
+  background-color: var(--butn-before-color);
   box-shadow: 0px 0px 5px 0px rgba(79, 79, 79, 0.26), 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
 }
 
-.TabsCodeBlock.TabsCodeBlock-buns{
+.TabsCodeBlock.TabsCodeBlock-buns {
   background-color: var(--butn-background-color);
+  border-radius: 15px 15px 0px 0px;
 
 }
 
 
-button.TabsCodeBlock-tabs-buttonName{
+button.TabsCodeBlock-tabs-buttonName {
   background-color: var(--butn-background-color);
   width: auto;
   height: auto;
   font-size: 1em;
   padding-left: 6px;
   padding-right: 6px;
-}
-button.TabsCodeBlock-tabs-buttonName:hover{
-  background-color: transparent;
-}
-button.TabsCodeBlock-tabs-buttonName.active{
+  border-radius: 15px 15px 0px 0px;
 
-  background-color: #dbf7f7;
+}
+
+button.TabsCodeBlock-tabs-buttonName:hover {
+  background-color: var(--butn-before-color);
+}
+
+button.TabsCodeBlock-tabs-buttonName.active {
+
+  background-color: var(--butn-before-color);
   width: auto;
   height: auto;
-  border-radius: 6px  6px 0px 0px;
+  border-radius: 15px 15px 0px 0px;
   box-shadow: none;
 
 }
-.internal-embed.markdown-embed.inline-embed.is-loaded{
+
+.internal-embed.markdown-embed.inline-embed.is-loaded {
   padding: 0px;
   border: 0px;
 }
 
 .block-language-tabs:nth-child(even) {
-  border-radius: 7px  7px 0px 0px;
-  background-color: rgb(216, 234, 247); 
+  border-radius: 15px 15px 0px 0px;
+  background-color: rgb(216, 234, 247);
   box-shadow: 0px 0px 5px 0px rgba(79, 79, 79, 0.26), 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
 }
