@@ -1,4 +1,5 @@
 ## 例1
+![](https://github.com/ssjy1919/Obsidian-minitabs/imag/例1.png)
 ````md
 ```minitabs
 tabs
@@ -13,6 +14,7 @@ tabs
 ````
 
 ## 例2
+![](https://github.com/ssjy1919/Obsidian-minitabs/imag/例2.png)
 ````md
 ```minitabs
 tabsBottom
@@ -28,7 +30,7 @@ tabsBottom
 
 
 ## 按钮在上和下的页面相互套娃
-这只是一个示例！实际上，如果需要套娃更推荐用`![[link]]`链接到第二层 tabs。
+![](https://github.com/ssjy1919/Obsidian-minitabs/imag/按钮在上和下的页面相互套娃.png)
 ``````md
 `````minitabs
 tabs
