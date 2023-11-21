@@ -17,8 +17,17 @@ export class SettingTab extends PluginSettingTab {
     display(): void {
         const { containerEl } = this;
         containerEl.empty();
-        containerEl.createEl("p", { text: "tabsCodeBlock 使用方法" });
+        containerEl.createEl("p", { text: "minitabs" });
         containerEl.createEl("p", { text: "复制代码块到你的笔记页面。" });
+        const a = containerEl.createEl("a", {
+            text: "GitHub仓库：https://github.com/ssjy1919/Obsidian-minitabs",
+            href: "https://github.com/ssjy1919/Obsidian-minitabs"
+        });
+        a.style.fontSize = "12px";
+        a.className = "external-link"; // 添加 class
+
+        // 为HTML添加一个自定义类名 方便对HTML进行额外操作，
+        containerEl.addClass('check-Synchronization-tips');
         containerEl.createEl("hr");
 
         containerEl.createEl("h3", { text: "tabs一共四种分割线分别是 ===、--- 、~~~ 和 @@@ 。" });
@@ -59,6 +68,7 @@ export class SettingTab extends PluginSettingTab {
             }
         });
         containerEl.createEl("hr");
+
     }
 }
 
