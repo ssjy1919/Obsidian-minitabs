@@ -68,6 +68,23 @@ export class SettingTab extends PluginSettingTab {
             }
         });
         containerEl.createEl("hr");
+        containerEl.createEl("h3", { text: "四象限" });
+        const pressf = containerEl.createEl("pre", { text: '````minitabs\nfourQuadrant\n---\n### 不紧急但重要⭐⭐⭐\n- [ ] 呆呆\n---\n### 紧急且重要⭐⭐⭐⭐\n- [ ] 呆呆\n---\n### 不紧急不重要⭐\n- [ ] 呆呆\n---\n### 紧急不重要⭐⭐\n- [ ] 呆呆\n````' });
+        pressf.style.padding = '10px';
+        pressf.style.fontSize="0.7em"
+        pressf.style.border = '1px solid #000000';
+        pressf.style.color = '#ff0000';
+        const buttonssf = containerEl.createEl("button", { text: "复制" });
+        buttonssf.addEventListener("click", function () {
+            if (pressf.textContent !== null) {
+                navigator.clipboard.writeText(pressf.textContent).then(function () {
+                    new Notice('复制成功！');
+                }, function (err) {
+                    new Notice('复制失败: ', err);
+                });
+            }
+        });
+        containerEl.createEl("hr");
 
     }
 }

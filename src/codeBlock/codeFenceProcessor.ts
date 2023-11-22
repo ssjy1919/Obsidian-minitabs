@@ -3,6 +3,7 @@ import { App, MarkdownPostProcessorContext } from "obsidian";
 import TabsCodeBlock, { DEFAULT_SETTINGS, TabsSettings } from "../main";
 import { TabsCodeView } from "./view/tabsCodeView";
 import { TabsBottomCodeView } from "./view/tabsBottomCodeView";
+import { FourQuadrantCodeView } from "./view/fourQuadrantCodeView";
 
 export class CodeFenceProcessor {
     plugin: TabsCodeBlock;
@@ -40,9 +41,10 @@ export class CodeFenceProcessor {
         }
         if (CodeBlockContent.split("\n")[0].trim() === "tabsBottom") {
             new TabsBottomCodeView(CodeBlockContent, this.app, this.plugin, this.settings, source, el, ctx);
-
         }
-        
+        if (CodeBlockContent.split("\n")[0].trim() === "fourQuadrant") {
+            new FourQuadrantCodeView(CodeBlockContent, this.app, this.plugin, this.settings, source, el, ctx);
+        }
     }
 
     // 加载已保存的文件信息

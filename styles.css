@@ -3,7 +3,7 @@
   --butn-before-color: #ecf4fa;
 }
 
-.block-language-minitabs:nth-child(odd) {
+.TabsCodeBlock-tabs:nth-child(odd) {
   border-radius: 15px 15px 0px 0px;
   background-color: var(--butn-before-color);
   box-shadow: 0px 0px 5px 0px rgba(79, 79, 79, 0.26), 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
@@ -52,4 +52,56 @@ button.TabsCodeBlock-tabs-buttonName.active {
   border-radius: 15px 15px 0px 0px;
   background-color: rgb(216, 234, 247);
   box-shadow: 0px 0px 5px 0px rgba(79, 79, 79, 0.26), 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+}
+
+
+/*四象限 fourQuadrant*/
+.fourQuadrant {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+body:not(.is-phone) .fourQuadrant-pages {
+  width: 49%;
+}
+body.is-phone .fourQuadrant-pages {
+  width: 100%;
+}
+.fourQuadrant-pages {
+  border: 1px solid rgba(0, 128, 0, 0.676);
+  margin: 1px;
+  padding-left: 0.5em;
+}
+
+.fourQuadrant-pages:nth-child(4n+1) {
+  background-color: #0000ff21;
+  border-radius: 18px 18px 0px 18px;
+}
+
+.fourQuadrant-pages:nth-child(4n+2) {
+  background-color: #ff00001c;
+  border-radius: 18px 18px 18px 0px;
+}
+
+.fourQuadrant-pages:nth-child(4n+3) {
+  background-color: #7f7f7f15;
+  border-radius: 18px 0px 18px 18px;
+  /* margin-bottom: 1em; */
+}
+
+.fourQuadrant-pages:nth-child(4n) {
+  background-color: #ffa60021;
+  border-radius: 0px 18px 18px 18px;
+  /* margin-bottom: 1em; */
+}
+.fourQuadrant .fourQuadrant-pages h1,
+.fourQuadrant .fourQuadrant-pages h2,
+.fourQuadrant .fourQuadrant-pages h3,
+.fourQuadrant .fourQuadrant-pages h4,
+.fourQuadrant .fourQuadrant-pages h5,
+.fourQuadrant .fourQuadrant-pages h6 {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
