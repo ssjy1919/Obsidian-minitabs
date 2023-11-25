@@ -1,7 +1,7 @@
 {
 	"id": "minitabs",
 	"name": "Minitabs",
-	"version": "0.0.4",
+	"version": "0.0.5",
 	"minAppVersion": "0.15.0",
 	"description": "通过代码块自定义一组可嵌套的标签页",
 	"author": "ssjy1919",
