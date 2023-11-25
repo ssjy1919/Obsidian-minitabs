@@ -1,12 +1,21 @@
-:root {
+/* :root {
   --butn-background-color: #c3def3;
   --butn-before-color: #ecf4fa;
+} */
+.theme-light {
+  --butn-background-color: #c3def3;
+  --butn-before-color: #ecf4fa;
+  --box-shadow: 0px 0px 5px 0px rgba(79, 79, 79, 0.26), 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
 }
-
+.theme-dark{
+  --butn-background-color: #4a4c4f;
+  --butn-before-color: #191919;
+  --box-shadow: 0px 0px 5px 0px rgba(101, 101, 101, 0.26), 0px 0px 5px 0px rgba(41, 41, 41, 0.1);
+}
 .TabsCodeBlock-tabs:nth-child(odd) {
   border-radius: 15px 15px 0px 0px;
   background-color: var(--butn-before-color);
-  box-shadow: 0px 0px 5px 0px rgba(79, 79, 79, 0.26), 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--box-shadow);
 }
 
 .TabsCodeBlock.TabsCodeBlock-buns {
@@ -51,7 +60,7 @@ button.TabsCodeBlock-tabs-buttonName.active {
 .block-language-tabs:nth-child(even) {
   border-radius: 15px 15px 0px 0px;
   background-color: rgb(216, 234, 247);
-  box-shadow: 0px 0px 5px 0px rgba(79, 79, 79, 0.26), 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--box-shadow);
 }
 
 
