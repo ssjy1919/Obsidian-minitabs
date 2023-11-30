@@ -40,7 +40,7 @@ export class SettingTab extends PluginSettingTab {
         pres.style.fontSize="0.7em"
         pres.style.border = '1px solid #000000';
         pres.style.color = '#ff0000';
-        const buttons = containerEl.createEl("button", { text: "复制" });
+        const buttons = containerEl.createEl("button", { text: "copy" });
         buttons.addEventListener("click", function () {
             if (pres.textContent !== null) {
                 navigator.clipboard.writeText(pres.textContent).then(function () {
@@ -57,7 +57,7 @@ export class SettingTab extends PluginSettingTab {
         press.style.fontSize="0.7em"
         press.style.border = '1px solid #000000';
         press.style.color = '#ff0000';
-        const buttonss = containerEl.createEl("button", { text: "复制" });
+        const buttonss = containerEl.createEl("button", { text: "copy" });
         buttonss.addEventListener("click", function () {
             if (press.textContent !== null) {
                 navigator.clipboard.writeText(press.textContent).then(function () {
@@ -74,7 +74,7 @@ export class SettingTab extends PluginSettingTab {
         pressf.style.fontSize="0.7em"
         pressf.style.border = '1px solid #000000';
         pressf.style.color = '#ff0000';
-        const buttonssf = containerEl.createEl("button", { text: "复制" });
+        const buttonssf = containerEl.createEl("button", { text: "copy" });
         buttonssf.addEventListener("click", function () {
             if (pressf.textContent !== null) {
                 navigator.clipboard.writeText(pressf.textContent).then(function () {
