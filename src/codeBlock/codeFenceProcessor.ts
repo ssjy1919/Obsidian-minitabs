@@ -31,7 +31,7 @@ export class CodeFenceProcessor {
             // 去除前后空格
             const trimmedLine = line.trim();
             // 不是以'//'开头
-            return !trimmedLine.startsWith('//')&& trimmedLine.length > 0;
+            return !trimmedLine.startsWith('//');
         }).join('\n');
         // console.log(CodeBlockContent);
 
