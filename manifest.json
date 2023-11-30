@@ -3,7 +3,7 @@
 	"name": "Minitabs",
 	"version": "0.0.7",
 	"minAppVersion": "0.15.0",
-	"description": "Customize a set of nested tabs through code blocks",
+	"description": "Customize a set of nested tabs through code blocks.",
 	"author": "ssjy1919",
 	"isDesktopOnly": false
 }
