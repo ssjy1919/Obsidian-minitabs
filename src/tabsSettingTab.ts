@@ -63,7 +63,7 @@ export class SettingTab extends PluginSettingTab {
         containerEl.createEl("hr");
         containerEl.createEl("h3", { text: "四象限" });
         const pressf = containerEl.createEl("pre", { text: '````minitabs\nfourQuadrant\n---\n### 不紧急但重要⭐⭐⭐\n- [ ] 呆呆\n---\n### 紧急且重要⭐⭐⭐⭐\n- [ ] 呆呆\n---\n### 不紧急不重要⭐\n- [ ] 呆呆\n---\n### 紧急不重要⭐⭐\n- [ ] 呆呆\n````' });
-        press.addClass('elm-pressf');
+        pressf.addClass('elm-pres');
         const buttonssf = containerEl.createEl("button", { text: "copy" });
         buttonssf.addEventListener("click", function () {
             if (pressf.textContent !== null) {
