@@ -17,17 +17,15 @@ export class SettingTab extends PluginSettingTab {
     display(): void {
         const { containerEl } = this;
         containerEl.empty();
-        containerEl.createEl("p", { text: "minitabs" });
         const aa = containerEl.createEl("a", {
             text: "更多知识管理访问 Obsidian 中文网：https://Obsidian.vip",
             href: "https://Obsidian.vip"
         });
-        aa.style.fontSize = "12px";
 
+        aa.addClass('elm-a');
         containerEl.createEl("p", { text: "使用方法：复制代码块到你的笔记页面。" });
 
         // 为HTML添加一个自定义类名 方便对HTML进行额外操作，
-        containerEl.addClass('check-Synchronization-tips');
         containerEl.createEl("hr");
 
         containerEl.createEl("h3", { text: "tabs一共四种分割线分别是 ===、--- 、~~~ 和 @@@ 。" });
@@ -36,51 +34,43 @@ export class SettingTab extends PluginSettingTab {
         containerEl.createEl("hr");
         containerEl.createEl("h3", { text: "按钮在上面 ↑" });
         const pres = containerEl.createEl("pre", { text: '````minitabs\n//按钮在上面\ntabs\n//按钮名字,要多少个写多少个\n`按钮1` `按钮2` `可以一直写下去……` \n===\n第一个按钮对应的页面\n===\n按钮二对应的页面\n===\n按钮三对应的页面\n````' });
-        pres.style.padding = '10px';
-        pres.style.fontSize="0.7em"
-        pres.style.border = '1px solid #000000';
-        pres.style.color = '#ff0000';
+
+        pres.addClass('elm-pres');
         const buttons = containerEl.createEl("button", { text: "copy" });
         buttons.addEventListener("click", function () {
             if (pres.textContent !== null) {
                 navigator.clipboard.writeText(pres.textContent).then(function () {
-                    new Notice('复制成功！');
+                    new Notice('copy！');
                 }, function (err) {
-                    new Notice('复制失败: ', err);
+                    new Notice('err: copy', err);
                 });
             }
         });
         containerEl.createEl("hr");
         containerEl.createEl("h3", { text: "按钮在下面 ↓" });
         const press = containerEl.createEl("pre", { text: '````minitabs\n//按钮在下面\ntabsBottom\n//按钮名字,要多少个写多少个\n`按钮1` `按钮2` `可以一直写下去……` \n===\n第一个按钮对应的页面\n===\n按钮二对应的页面\n===\n按钮三对应的页面\n````' });
-        press.style.padding = '10px';
-        press.style.fontSize="0.7em"
-        press.style.border = '1px solid #000000';
-        press.style.color = '#ff0000';
+        press.addClass('elm-pres');
         const buttonss = containerEl.createEl("button", { text: "copy" });
         buttonss.addEventListener("click", function () {
             if (press.textContent !== null) {
                 navigator.clipboard.writeText(press.textContent).then(function () {
-                    new Notice('复制成功！');
+                    new Notice('copy！');
                 }, function (err) {
-                    new Notice('复制失败: ', err);
+                    new Notice('err: copy', err);
                 });
             }
         });
         containerEl.createEl("hr");
         containerEl.createEl("h3", { text: "四象限" });
         const pressf = containerEl.createEl("pre", { text: '````minitabs\nfourQuadrant\n---\n### 不紧急但重要⭐⭐⭐\n- [ ] 呆呆\n---\n### 紧急且重要⭐⭐⭐⭐\n- [ ] 呆呆\n---\n### 不紧急不重要⭐\n- [ ] 呆呆\n---\n### 紧急不重要⭐⭐\n- [ ] 呆呆\n````' });
-        pressf.style.padding = '10px';
-        pressf.style.fontSize="0.7em"
-        pressf.style.border = '1px solid #000000';
-        pressf.style.color = '#ff0000';
+        press.addClass('elm-pressf');
         const buttonssf = containerEl.createEl("button", { text: "copy" });
         buttonssf.addEventListener("click", function () {
             if (pressf.textContent !== null) {
                 navigator.clipboard.writeText(pressf.textContent).then(function () {
-                    new Notice('复制成功！');
+                    new Notice('copy！');
                 }, function (err) {
-                    new Notice('复制失败: ', err);
+                    new Notice('err: copy', err);
                 });
             }
         });
@@ -89,7 +79,7 @@ export class SettingTab extends PluginSettingTab {
             text: "访问此插件的GitHub仓库：https://github.com/ssjy1919/Obsidian-minitabs",
             href: "https://github.com/ssjy1919/Obsidian-minitabs"
         });
-        a.style.fontSize = "12px";
+        a.addClass('elm-a');
     }
 }
 

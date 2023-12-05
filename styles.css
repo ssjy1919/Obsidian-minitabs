@@ -7,11 +7,13 @@
   --butn-before-color: #ecf4fa;
   --box-shadow: 0px 0px 5px 0px rgba(79, 79, 79, 0.26), 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
 }
-.theme-dark{
+
+.theme-dark {
   --butn-background-color: #4a4c4f;
   --butn-before-color: #191919;
   --box-shadow: 0px 0px 5px 0px rgba(101, 101, 101, 0.26), 0px 0px 5px 0px rgba(41, 41, 41, 0.1);
 }
+
 .TabsCodeBlock-tabs:nth-child(odd) {
   border-radius: 15px 15px 0px 0px;
   background-color: var(--butn-before-color);
@@ -75,9 +77,11 @@ button.TabsCodeBlock-tabs-buttonName.active {
 body:not(.is-phone) .fourQuadrant-pages {
   width: 49%;
 }
+
 body.is-phone .fourQuadrant-pages {
   width: 100%;
 }
+
 .fourQuadrant-pages {
   border: 1px solid rgba(0, 128, 0, 0.676);
   margin: 1px;
@@ -105,6 +109,7 @@ body.is-phone .fourQuadrant-pages {
   border-radius: 0px 18px 18px 18px;
   /* margin-bottom: 1em; */
 }
+
 .fourQuadrant .fourQuadrant-pages h1,
 .fourQuadrant .fourQuadrant-pages h2,
 .fourQuadrant .fourQuadrant-pages h3,
@@ -113,4 +118,16 @@ body.is-phone .fourQuadrant-pages {
 .fourQuadrant .fourQuadrant-pages h6 {
   margin-top: 0.5em;
   margin-bottom: 0.5em;
+}
+
+
+.elm-a {
+  font-size: 12px;
+}
+
+.elm-pres {
+  padding: 10px;
+  font-size: 0.7em;
+  border: 1px solid #000000;
+  color: #ff0000;
 }

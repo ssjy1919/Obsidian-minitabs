@@ -19,9 +19,6 @@ export default class TabsPlugin extends Plugin {
 		this.addSettingTab(new SettingTab(this.app, this));
 
 		new CodeFenceProcessor(this.app, this, this.settings);
-		this.registerDomEvent(document, 'click', (evt: MouseEvent) => {
-			// console.log('click', evt);
-		});
 		
 	}
 	onunload() {
