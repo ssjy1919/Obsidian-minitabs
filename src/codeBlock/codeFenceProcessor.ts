@@ -27,14 +27,16 @@ export class CodeFenceProcessor {
         // 第一步:处理'source'，这是代码块里面的字符
         const CodeBlockContentResult = source.trim();
         const lines = CodeBlockContentResult.split('\n');
-        const CodeBlockContent = lines.filter(line => {
-            // 去除前后空格
-            const trimmedLine = line.trim();
-            // 不是以'//'开头
-            return !trimmedLine.startsWith('//');
-        }).join('\n');
+        let result: string[] = [];
+        for (let i = 0; i < lines.length; i++) {
+            const trimmedLine = lines[i].trim();
+            if (trimmedLine === "tabs" || trimmedLine === "tabsBottom" || trimmedLine === "fourQuadrant") {
+                result = lines.slice(i);
+                break;
+            }
+        }
+        const CodeBlockContent = result.join('\n');
         // console.log(CodeBlockContent);
-
         //使用trim()函数来移除字符串两端的空格。
         if (CodeBlockContent.split("\n")[0].trim() === "tabs") {
             new TabsCodeView(CodeBlockContent, this.app, this.plugin, this.settings, source, el, ctx);
