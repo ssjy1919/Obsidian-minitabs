@@ -33,7 +33,7 @@ export class SettingTab extends PluginSettingTab {
         containerEl.createEl("p", { text: "可以根据不同的分割线使相互嵌套tabs" });
         containerEl.createEl("hr");
         containerEl.createEl("h3", { text: "按钮在上面 ↑" });
-        const pres = containerEl.createEl("pre", { text: '````minitabs\n//按钮在上面\ntabs\n//按钮名字,要多少个写多少个\n`按钮1` `按钮2` `可以一直写下去……` \n===\n第一个按钮对应的页面\n===\n按钮二对应的页面\n===\n按钮三对应的页面\n````' });
+        const pres = containerEl.createEl("pre", { text: '````minitabs\n//按钮在上面\ntabs\n`按钮1` `按钮2` `可以一直写下去……` \n===\n第一个按钮对应的页面\n===\n按钮二对应的页面\n===\n按钮三对应的页面\n````' });
 
         pres.addClass('elm-pres');
         const buttons = containerEl.createEl("button", { text: "copy" });
@@ -48,7 +48,7 @@ export class SettingTab extends PluginSettingTab {
         });
         containerEl.createEl("hr");
         containerEl.createEl("h3", { text: "按钮在下面 ↓" });
-        const press = containerEl.createEl("pre", { text: '````minitabs\n//按钮在下面\ntabsBottom\n//按钮名字,要多少个写多少个\n`按钮1` `按钮2` `可以一直写下去……` \n===\n第一个按钮对应的页面\n===\n按钮二对应的页面\n===\n按钮三对应的页面\n````' });
+        const press = containerEl.createEl("pre", { text: '````minitabs\n//按钮在下面\ntabsBottom\n`按钮1` `按钮2` `可以一直写下去……` \n===\n第一个按钮对应的页面\n===\n按钮二对应的页面\n===\n按钮三对应的页面\n````' });
         press.addClass('elm-pres');
         const buttonss = containerEl.createEl("button", { text: "copy" });
         buttonss.addEventListener("click", function () {

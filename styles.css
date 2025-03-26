@@ -2,112 +2,101 @@
   --butn-background-color: #c3def3;
   --butn-before-color: #ecf4fa;
 } */
+
+
 .theme-light {
-  --butn-background-color: #c3def3;
-  --butn-before-color: #ecf4fa;
-  --box-shadow: 0px 0px 5px 0px rgba(79, 79, 79, 0.26), 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+    --box-shadow: 0px 0px 5px 0px rgba(79, 79, 79, 0.26), 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
 }
 
 .theme-dark {
-  --butn-background-color: #4a4c4f;
-  --butn-before-color: #191919;
-  --box-shadow: 0px 0px 5px 0px rgba(101, 101, 101, 0.26), 0px 0px 5px 0px rgba(41, 41, 41, 0.1);
+    --butn-background-color: #4a4c4f;
+    --butn-before-color: #191919;
+    --box-shadow: 0px 0px 5px 0px rgba(101, 101, 101, 0.26), 0px 0px 5px 0px rgba(41, 41, 41, 0.1);
 }
 
 .TabsCodeBlock-tabs:nth-child(odd) {
-  border-radius: 15px 15px 0px 0px;
-  background-color: var(--butn-before-color);
-  box-shadow: var(--box-shadow);
+    border-radius: 15px 15px 0px 0px;
+    /* background-color: var(--butn-before-color); */
+    box-shadow: var(--box-shadow);
 }
 
 .TabsCodeBlock.TabsCodeBlock-buns {
-  background-color: var(--butn-background-color);
-  border-radius: 15px 15px 0px 0px;
+    background-color: var(--ribbon-background);
+    border-radius: 15px 15px 0px 0px;
 
 }
 
 
 button.TabsCodeBlock-tabs-buttonName {
-  background-color: var(--butn-background-color);
-  width: auto;
-  height: auto;
-  font-size: 1em;
-  /* padding-top: 0px;
-  padding-bottom: 3px;
-  padding-left: 6px;
-  padding-right: 6px; */
-  border-radius: 15px 15px 0px 0px;
-  box-shadow: none;
+    background-color: var(--ribbon-background);
+    width: auto;
+    height: auto;
+    font-size: 1em;
+    border-radius: 15px 15px 0px 0px;
+    box-shadow: none;
+
+
 }
 
-button.TabsCodeBlock-tabs-buttonName:hover {
-  background-color: var(--butn-before-color);
-}
+
 
 button.TabsCodeBlock-tabs-buttonName.active {
 
-  background-color: var(--butn-before-color);
-  width: auto;
-  height: auto;
-  border-radius: 15px 15px 0px 0px;
-  box-shadow: none;
+    width: auto;
+    height: auto;
+    border-radius: 15px 15px 0px 0px;
+    box-shadow: var(--input-shadow-hover);
 
 }
 
 .internal-embed.markdown-embed.inline-embed.is-loaded {
-  padding: 0px;
-  border: 0px;
+    padding: 0px;
+    border: 0px;
 }
 
 .block-language-tabs:nth-child(even) {
-  border-radius: 15px 15px 0px 0px;
-  background-color: rgb(216, 234, 247);
-  box-shadow: var(--box-shadow);
+    border-radius: 15px 15px 0px 0px;
+    box-shadow: var(--box-shadow);
 }
 
 
 /*四象限 fourQuadrant*/
 .fourQuadrant {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 body:not(.is-phone) .fourQuadrant-pages {
-  width: 49%;
+    width: 49%;
 }
 
 body.is-phone .fourQuadrant-pages {
-  width: 100%;
+    width: 100%;
 }
 
 .fourQuadrant-pages {
-  border: 1px solid rgba(0, 128, 0, 0.676);
-  margin: 1px;
-  padding-left: 0.5em;
+    margin: 1px;
+    padding-left: 0.5em;
 }
 
 .fourQuadrant-pages:nth-child(4n+1) {
-  background-color: #0000ff21;
-  border-radius: 18px 18px 0px 18px;
+    border-radius: 18px 18px 0px 18px;
 }
 
 .fourQuadrant-pages:nth-child(4n+2) {
-  background-color: #ff00001c;
-  border-radius: 18px 18px 18px 0px;
+    border-radius: 18px 18px 18px 0px;
 }
 
 .fourQuadrant-pages:nth-child(4n+3) {
-  background-color: #7f7f7f15;
-  border-radius: 18px 0px 18px 18px;
-  /* margin-bottom: 1em; */
+    border-radius: 18px 0px 18px 18px;
+    /* margin-bottom: 1em; */
 }
 
 .fourQuadrant-pages:nth-child(4n) {
-  background-color: #ffa60021;
-  border-radius: 0px 18px 18px 18px;
-  /* margin-bottom: 1em; */
+    border-radius: 0px 18px 18px 18px;
+    /* margin-bottom: 1em; */
 }
 
 .fourQuadrant .fourQuadrant-pages h1,
@@ -116,18 +105,22 @@ body.is-phone .fourQuadrant-pages {
 .fourQuadrant .fourQuadrant-pages h4,
 .fourQuadrant .fourQuadrant-pages h5,
 .fourQuadrant .fourQuadrant-pages h6 {
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 }
 
 
 .elm-a {
-  font-size: 12px;
+    font-size: 12px;
 }
 
 .elm-pres {
-  padding: 10px;
-  font-size: 0.7em;
-  border: 1px solid #000000;
-  color: #ff0000;
+    padding: 10px;
+    font-size: 0.7em;
+    border: 1px solid #000000;
+    color: #ff0000;
+}
+
+.block-language-minitabs {
+    margin: 0px 0px 0px 0px;
 }
