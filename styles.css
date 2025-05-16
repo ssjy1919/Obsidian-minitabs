@@ -64,8 +64,8 @@ button.TabsCodeBlock-tabs-buttonName.active {
 .fourQuadrant {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     flex-wrap: wrap;
-    justify-content: center;
 }
 
 body:not(.is-phone) .fourQuadrant-pages {
