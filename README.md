@@ -1,9 +1,4 @@
-# 已弃用
 
-此插件已弃用
-功能已经被`tab panels`插件覆盖
-
-前往[tab panels](https://github.com/GnoxNahte/obsidian-tab-panels)插件仓库，或者官方插件商城搜索`tab panels`
 
 ## 这是一个Obsidian笔记软件的插件
 可以通过代码块嵌入多个标签页
