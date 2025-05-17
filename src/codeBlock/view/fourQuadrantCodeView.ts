@@ -22,6 +22,9 @@ export class FourQuadrantCodeView {
     async onload() {
         const div = document.createElement('div');
         div.className = 'fourQuadrant';
+        let divItem = document.createElement('div');
+        divItem.className = 'fourQuadrant-item';
+        let count = 0;
         if (this.CodeBlockContent.split("\n")[1]) {
             const allLinesAfterFirst = this.CodeBlockContent.split("\n").slice(2).join("\n");
             let separator = "===";
@@ -37,11 +40,20 @@ export class FourQuadrantCodeView {
             const regex = new RegExp(`\\s*${separator}\\s*`);
             const paragraphs = allLinesAfterFirst.split(regex);
             for (let i = 0; i < paragraphs.length; i++) {
-                    const pagesLine = document.createElement('div');
-                    pagesLine.className = "fourQuadrant-pages"
-                    await MarkdownRenderer.render(this.app, paragraphs[i], pagesLine, this.ctx.sourcePath, this.plugin);
-                    div.appendChild(pagesLine);
-                
+                const pagesLine = document.createElement('div');
+                pagesLine.className = "fourQuadrant-pages"
+                await MarkdownRenderer.render(this.app, paragraphs[i], pagesLine, this.ctx.sourcePath, this.plugin);
+                divItem.appendChild(pagesLine);
+                count++;
+                if (count % 2 === 0) {
+                    div.appendChild(divItem);
+                    divItem = document.createElement('div');
+                    divItem.className = 'fourQuadrant-item';
+                }
+            }
+            // 如果最后还有未满2个的divItem，也要加进去
+            if (count % 2 !== 0) {
+                div.appendChild(divItem);
             }
         }
         this.el.appendChild(div);

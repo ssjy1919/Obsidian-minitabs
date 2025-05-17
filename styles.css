@@ -63,18 +63,31 @@ button.TabsCodeBlock-tabs-buttonName.active {
 .fourQuadrant {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     flex-wrap: wrap;
 }
-
-body:not(.is-phone) .fourQuadrant-pages {
-    width: 49%;
+.fourQuadrant .fourQuadrant-item {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
+.fourQuadrant-pages {
+    width: 49.5%;
+}
+.fourQuadrant-pages:nth-child(1) {
+    margin-right: 1px;
+}
+.fourQuadrant-pages:nth-child(2) {
+    margin-left: 1px;
+}
 body.is-phone .fourQuadrant-pages {
     width: 100%;
 }
 
+
+/* 
 .fourQuadrant-pages {
     margin: 1px;
     padding-left: 0.5em;
@@ -90,12 +103,10 @@ body.is-phone .fourQuadrant-pages {
 
 .fourQuadrant-pages:nth-child(4n+3) {
     border-radius: 18px 0px 18px 18px;
-    /* margin-bottom: 1em; */
 }
 
 .fourQuadrant-pages:nth-child(4n) {
     border-radius: 0px 18px 18px 18px;
-    /* margin-bottom: 1em; */
 }
 
 .fourQuadrant .fourQuadrant-pages h1,
@@ -107,7 +118,7 @@ body.is-phone .fourQuadrant-pages {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
 }
-
+ */
 
 .elm-a {
     font-size: 12px;
