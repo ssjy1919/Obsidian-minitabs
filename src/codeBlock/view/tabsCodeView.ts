@@ -86,7 +86,19 @@ export class TabsCodeView {
                         pagesLine.style.display = 'none';
                     }
                     pagesLine.className = "TabsCodeBlock-tabs-pages"
-                    await MarkdownRenderer.render(this.app, paragraphs[i], pagesLine, this.ctx.sourcePath, this.plugin);
+                    const selfLink = this.ctx.sourcePath.replace(/\.md$/, "");
+					if (paragraphs[i].includes(`![[${selfLink}]]`)) {
+						// 显示警告或跳过
+						pagesLine.innerText = "⚠️ 检测到自引用，已阻止渲染";
+					} else {
+						await MarkdownRenderer.render(
+							this.app,
+							paragraphs[i],
+							pagesLine,
+							this.ctx.sourcePath,
+							this.plugin
+						);
+					}
                     contend.appendChild(pagesLine);
                     pagesLines.push(pagesLine);
                 }
