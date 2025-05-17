@@ -86,7 +86,7 @@ export class TabsCodeView {
                         pagesLine.style.display = 'none';
                     }
                     pagesLine.className = "TabsCodeBlock-tabs-pages"
-                    const selfLink = this.ctx.sourcePath.replace(/\.md$/, "");
+                    const selfLink = this.ctx.sourcePath.split('/').pop()?.replace(/\.md$/, "") ?? "";
 					if (paragraphs[i].includes(`![[${selfLink}]]`)) {
 						// 显示警告或跳过
 						pagesLine.innerText = "⚠️ 检测到自引用，已阻止渲染";

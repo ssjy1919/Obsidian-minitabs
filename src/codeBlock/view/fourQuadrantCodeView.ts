@@ -52,7 +52,11 @@ export class FourQuadrantCodeView {
 			for (let i = 0; i < paragraphs.length; i++) {
 				const pagesLine = document.createElement("div");
 				pagesLine.className = "fourQuadrant-pages";
-				const selfLink = this.ctx.sourcePath.replace(/\.md$/, "");
+				const selfLink =
+					this.ctx.sourcePath
+						.split("/")
+						.pop()
+						?.replace(/\.md$/, "") ?? "";
 				if (paragraphs[i].includes(`![[${selfLink}]]`)) {
 					// 显示警告或跳过
 					pagesLine.innerText = "⚠️ 检测到自引用，已阻止渲染";
